@@ -12,17 +12,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { appRoute } from '@app/app.route';
-// import {RestService} from '@shared/services/rest.service'
-// import { Http } from '@angular/http';
-// import { HttpClient } from 'selenium-webdriver/http';
+
 import { HttpClientModule } from '@angular/common/http';
+
+import { CardChartComponent } from '@shared/chart-card/chart-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardChartComponent
   ],
   imports: [
     BrowserModule,

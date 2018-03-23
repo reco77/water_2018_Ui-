@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "px-progress-bar": "^1.2.2"
+    "px-progress-bar": "^1.2.2",
+    "px-simple-bar-chart": "^2.1.1"
   }
 }
