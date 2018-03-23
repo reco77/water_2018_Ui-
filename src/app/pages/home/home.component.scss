@@ -5,3 +5,28 @@
 .title {
     color: $primary-color;
 }
+
+.card-home {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px; 
+    min-height: 200px;
+}
+
+.icon-home {
+    justify-content: center;
+    text-align: center;
+}
+
+.danger-color {
+    color: red;
+}
+
+.safe-color{
+    color: green;
+}
+
+.warning-color {
+    color: gold;
+}
