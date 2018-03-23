@@ -1,0 +1,7 @@
+// @import '../../_app.color.scss';
+@import '~app/app.color.scss';
+// @import '~app/pages/dashboard/dashboard.component.scss';
+
+.title {
+    color: $primary-color;
+}
