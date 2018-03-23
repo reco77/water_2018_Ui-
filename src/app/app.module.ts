@@ -13,9 +13,11 @@ import { HomeComponent } from '@pages/home/home.component';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { appRoute } from '@app/app.route';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { CardChartComponent } from '@shared/chart-card/chart-card.component';
+import { RestService } from '@shared/services/rest.service';
+import { Http } from '@angular/http';
 
 
 @NgModule({
@@ -36,8 +38,8 @@ import { CardChartComponent } from '@shared/chart-card/chart-card.component';
     // HttpClient
   ],
   providers: [
-    // RestService,
-    // Http
+    RestService,
+    HttpClient
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-// import { RestService } from '@shared/services/rest.service';
-
+import { RestService } from '@shared/services/rest.service';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/Rx';
 
 
 @Component({
@@ -24,11 +25,17 @@ export class AppComponent {
   };
 
   constructor(
-    // private rest:RestService
+    private rest:RestService
    ){
-    console.log("test");
+    // console.log("test");
+    // console.log(rest.getRequest("https://httpbin.org/get",{}));
+    // // let responet: Observable<any> = rest.getRequest("https://httpbin.org/get",{});
+    // // console.log(responet);
+    // rest.getRequest("https://httpbin.org/get",{}).subscribe(res =>{
+    //   console.log(res);
+    // })
     // rest.GetRequest("https://httpbin.org/get",{}).subscriber(res => {
     //   console.log(res);   
-    // })
+    // });
   }
 }

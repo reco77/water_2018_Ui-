@@ -6,29 +6,29 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class RestService {
-    public headers: Headers;
+    public headers: HttpHeaders;
     public requestoptions: RequestOptions;
     public res: Response;
 
-    constructor(public http: Http, private httpClient: HttpClient) { }
+    constructor(private httpClient: HttpClient) { }
 
-    public PostRequest(url: string, data: any): any {
+    public postRequest(url: string, data: any): Observable<any> {
 
-        this.headers = new Headers();
+        this.headers = new HttpHeaders();
         this.headers.append("Content-type", "application/json");
         this.headers.append("Authorization", 'Bearer ' + localStorage.getItem("token") );
         // let httpHeaders = new HttpHeaders(this.headers);
-        this.requestoptions = new RequestOptions({
-            method: RequestMethod.Post,
-            url: url,
-            headers: this.headers,
-            body: JSON.stringify(data)
-        })
-
+        // this.requestoptions = new RequestOptions({
+        //     method: RequestMethod.Post,
+        //     url: url,
+        //     headers: this.headers,
+        //     body: JSON.stringify(data)
+        // })
+        console.log("start post to url: ",url);
         return this.httpClient.post(
             url,
             JSON.stringify(data),
-            // {headers: this.headers}
+            {headers: this.headers}
         )
             .map((res: Response) => {
                     return [{ status: res.status, json: res }]
@@ -44,22 +44,22 @@ export class RestService {
             });
     }
 
-    public GetRequest(url: string, data: any): any { 
-        this.headers = new Headers();
+    public getRequest(url: string, data: any): Observable<any> { 
+        this.headers = new HttpHeaders();
         this.headers.append("Content-type", "application/json");
         this.headers.append("Authorization", 'Bearer ' + localStorage.getItem("token") );
 
-        this.requestoptions = new RequestOptions({
-            method: RequestMethod.Get,
-            url: url,
-            headers: this.headers,
-            body: JSON.stringify(data)
-        })
-
-        return this.httpClient.post(
+        // this.requestoptions = new RequestOptions({
+        //     method: RequestMethod.Get,
+        //     url: url,
+        //     headers: this.headers,
+        //     body: JSON.stringify(data)
+        // })
+        console.log("start get to url: ",url);
+        return this.httpClient.get(
             url,
-            JSON.stringify(data),
-            // {headers: this.headers}
+            // JSON.stringify(data),
+            {headers: this.headers}
         )
             .map((res: Response) => {
                     return [{ status: res.status, json: res }]
@@ -75,22 +75,22 @@ export class RestService {
             });
      }
 
-    public PutRequest(url: string, data: any): any { 
-        this.headers = new Headers();
+    public putRequest(url: string, data: any): Observable<any> { 
+        this.headers = new HttpHeaders();
         this.headers.append("Content-type", "application/json");
         this.headers.append("Authorization", 'Bearer ' + localStorage.getItem("token") );
 
-        this.requestoptions = new RequestOptions({
-            method: RequestMethod.Put,
-            url: url,
-            headers: this.headers,
-            body: JSON.stringify(data)
-        })
+        // this.requestoptions = new RequestOptions({
+        //     method: RequestMethod.Put,
+        //     url: url,
+        //     headers: this.headers,
+        //     body: JSON.stringify(data)
+        // })
 
-        return this.httpClient.post(
+        return this.httpClient.put(
             url,
             JSON.stringify(data),
-            // {headers: this.headers}
+            {headers: this.headers}
         )
             .map((res: Response) => {
                     return [{ status: res.status, json: res }]
@@ -106,22 +106,22 @@ export class RestService {
             });
      }
 
-    public DeleteRequest(url: string, data: any): any { 
-        this.headers = new Headers();
+    public deleteRequest(url: string, data: any): Observable<any> { 
+        this.headers = new HttpHeaders();
         this.headers.append("Content-type", "application/json");
         this.headers.append("Authorization", 'Bearer ' + localStorage.getItem("token") );
 
-        this.requestoptions = new RequestOptions({
-            method: RequestMethod.Delete,
-            url: url,
-            headers: this.headers,
-            body: JSON.stringify(data)
-        })
+        // this.requestoptions = new RequestOptions({
+        //     method: RequestMethod.Delete,
+        //     url: url,
+        //     headers: this.headers,
+        //     body: JSON.stringify(data)
+        // })
 
-        return this.httpClient.post(
+        return this.httpClient.delete(
             url,
-            JSON.stringify(data),
-            // {headers: this.headers}
+            // JSON.stringify(data),
+            {headers: this.headers}
         )
             .map((res: Response) => {
                     return [{ status: res.status, json: res }]
