@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { appRoute } from '@app/app.route';
+import { CardChartComponent } from '@shared/chart-card/chart-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardChartComponent
   ],
   imports: [
     BrowserModule,
