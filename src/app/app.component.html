@@ -1,46 +1,48 @@
-<nav class="navbar navbar-expand navbar-light bg-light primay-color ">
-  <a class="navbar-brand" routerLink="/">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item ">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Analysis</a>
-      </li>
-    </ul>
+<div class="background">
+  <nav class="navbar navbar-expand navbar-dark bg-dark primay-color ">
+    <a class="navbar-brand" routerLink="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Analysis</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <px-progress-bar
+  value="20"
+  min="0"
+  max="100">
+  </px-progress-bar>
+  <!--The content below is only a placeholder and can be replaced.-->
+  <!-- <div  class="text-align-left ">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <google-chart [data]="pieChartData"></google-chart>
   </div>
-</nav>
-<px-progress-bar
-value="20"
-min="0"
-max="100">
-</px-progress-bar>
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div  class="text-align-left ">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <google-chart [data]="pieChartData"></google-chart>
+  <h2>Here are some links to help you start: </h2>
+  <ul>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    </li>
+  </ul> -->
+  
+  
+  <router-outlet></router-outlet>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
-
-
-<router-outlet></router-outlet>
