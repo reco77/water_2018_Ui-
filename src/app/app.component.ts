@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { RestService } from '@shared/services/rest.service';
 
 
 
@@ -21,4 +22,13 @@ export class AppComponent {
     ],
     options: {'title': 'Tasks'},
   };
+
+  constructor(
+    // private rest:RestService
+   ){
+    console.log("test");
+    // rest.GetRequest("https://httpbin.org/get",{}).subscriber(res => {
+    //   console.log(res);   
+    // })
+  }
 }
