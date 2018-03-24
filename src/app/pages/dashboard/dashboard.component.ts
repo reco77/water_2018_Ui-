@@ -23,4 +23,7 @@ export class DashboardComponent {
         ["Riyadh", 80],
         ["Sharyah",20]
     ]
+
+    currentMode: string = "safe";
+    waterConsumePrecent = 15;
 }

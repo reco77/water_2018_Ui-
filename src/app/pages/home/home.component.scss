@@ -22,7 +22,7 @@
 }
 
 .danger-color {
-    background-color: #dc3545 !important;
+    color: #dd2c00 ;
 }
 
 .safe-color{
@@ -30,7 +30,7 @@
 }
 
 .warning-color {
-    color: gold;
+    color: #ffb300;
 }
 
 .sub-title{
@@ -54,3 +54,13 @@
 
 }
 
+.icon-warning {
+    
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    bottom: 50px;
+    font-size: 50px;
+
+    right: 0px;
+    top: 31px;
+}

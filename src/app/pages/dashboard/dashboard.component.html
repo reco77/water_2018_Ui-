@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12">
-        <chart-card [title]="'Bar Chart'">
+        <chart-card [title]="'Total Consume and Produce Over Time'">
             <div class="toEnd">
                 <div class="margin-left-15">
                     <div class="produce"> </div>
@@ -15,26 +15,6 @@
             [dataTable]="barChartData"
             [chartType]="'ColumnChart'"
             [colors]="'hackIot'"
-            >
-            </general-chart>
-        </chart-card>
-    </div>
-    <div class="col-6">
-        <chart-card [title]="'Bar Chart'">
-            <general-chart
-            [dataTable]="barChartData"
-            [chartType]="'ColumnChart'"
-            [colors]="'c'"
-            >
-            </general-chart>
-        </chart-card>
-    </div>
-    <div class="col-6">
-        <chart-card class="chart-card" [title]="'Bar Chart'">
-            <general-chart
-            [dataTable]="barChartData"
-            [chartType]="'BarChart'"
-            [colors]="'c'"
             >
             </general-chart>
         </chart-card>
@@ -63,13 +43,11 @@
             </chart-card>
         </div>
         <div class="col-6">
-            <chart-card [title]="'Bar Chart'">
-                <general-chart
-                [dataTable]="barChartData"
-                [chartType]="'ColumnChart'"
-                [colors]="'c'"
-                >
-                </general-chart>
+            <chart-card [title]="'Precent of Unuse Water'">
+                    <div class="icon-home  drop-water ">
+                            <!-- <i class="material-icons icon-warning" [ngClass]="currentMode+'-color'">warning</i> -->
+                            <p class="center" >{{waterConsumePrecent}}%</p>
+                    </div>
             </chart-card>
         </div>
     </div>

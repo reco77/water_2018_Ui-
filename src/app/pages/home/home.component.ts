@@ -9,5 +9,6 @@ import { Component } from '@angular/core';
     ]
 })
 export class HomeComponent {
-
+    currentMode: string = "safe";
+    waterConsume = 15;
 }
