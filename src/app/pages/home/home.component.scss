@@ -22,7 +22,7 @@
 }
 
 .danger-color {
-    color: red;
+    background-color: #dc3545 !important;
 }
 
 .safe-color{
@@ -36,3 +36,21 @@
 .sub-title{
     color: darkgray;
 }
+
+.drop-water{
+        background-color: #1a75d3;
+        width: 100px;
+        height: 100px;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 75px;
+        -webkit-border-bottom-right-radius: 75px;
+        -webkit-border-bottom-left-radius: 75px;
+        -webkit-transform:rotate(45deg);
+        box-shadow: 1px 1px 7px #1a1a1a;
+        display: flex;
+        position: relative;
+        margin: auto;
+        margin-top: 37px;
+
+}
+

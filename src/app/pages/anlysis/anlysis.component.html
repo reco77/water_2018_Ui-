@@ -19,7 +19,8 @@
         <div class="card content">
             <div *ngIf="currentAction === 'consumption'">
                     <px-tabs 
-                    [selected]="0">
+                    [selected]="0"
+                    >
                             <!-- <px-tab (click)="onSelect(0)" >Over all</px-tab> -->
                             <px-tab (click)="onSelect(0)">Agricultural</px-tab>
                             <px-tab (click)="onSelect(1)">Domestic</px-tab>

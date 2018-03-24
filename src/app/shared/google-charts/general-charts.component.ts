@@ -3,8 +3,8 @@ import { Component, OnInit, Input, ViewChild, HostListener } from '@angular/core
 
 @Component({
  selector: "general-chart",
- template: require("./general-charts.component.html"),
- styles: [require("./general-charts.component.scss")]
+ templateUrl: "./general-charts.component.html",
+ styles: ["./general-charts.component.scss"]
 })
 
 export class OurGoogleChartComponent {
