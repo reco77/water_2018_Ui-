@@ -1,0 +1,84 @@
+<div class="example-container mat-elevation-z8">
+        <mat-table #table [dataSource]="dataSource" matSort>
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="regions">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Regions </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.regions}} </mat-cell>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <!-- <ng-container matColumnDef="2012">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> 2012 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element['2012']}} </mat-cell>
+          </ng-container> -->
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="2013">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> 2013 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element['2013']}} </mat-cell>
+          </ng-container>
+      
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="2014">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> 2014 </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element['2014']}} </mat-cell>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="2015">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2015 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2015']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="2016">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2016 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2016']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="2017">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2017 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2017']}} </mat-cell>
+              </ng-container>
+              <!-- Name Column -->
+          <ng-container matColumnDef="2018">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2018 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2018']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="2019">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2019 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2019']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="2020">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2020 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2020']}} </mat-cell>
+              </ng-container>
+              <!-- Name Column -->
+          <ng-container matColumnDef="2021">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2021 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2021']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="2022">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2022 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2022']}} </mat-cell>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="2023">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> 2023 </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element['2023']}} </mat-cell>
+              </ng-container>
+
+              
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>

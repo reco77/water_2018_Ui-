@@ -14,3 +14,22 @@
 .padding-15{
     padding: 15px;
 }
+:host(.iron-selected)>.tab-title {
+    color: #2962ff;
+}
+
+.tab-title:hover {
+    color: #2962ff;
+}
+.mat-table {
+    overflow: auto;
+}
+
+.mat-cell, .mat-header-cell{
+    // margin: 0 10px;
+    overflow: unset;
+}
+
+.cursor2{
+    cursor: pointer;
+}

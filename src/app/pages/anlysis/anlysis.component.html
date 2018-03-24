@@ -8,15 +8,39 @@
   </px-accordion-group>  -->
 
 <div class="row">
-    <div class="col-2 ">
+    <div class="col-2">
         <div class="card max-content padding-15">
-          <p class="action active-action-color" [class]="currentAction === 'produce'? 'active-action-color': ''">Produce Water</p>
-          <p class="action" [class]="currentAction === 'reduce'? 'active-action-color': ''">Reduce</p>  
+          <p class="cursor2" (click)="onActionSelect('consumption')" [ngClass]="currentAction === 'consumption'? 'active-action-color': ''">Consumption Water</p>
+          <p class="cursor2" (click)="onActionSelect('reduce')" [ngClass]="currentAction === 'reduce'? 'active-action-color': ''">Reduce</p>  
         </div>
         
     </div>
     <div class="col-10">
         <div class="card content">
+            <div *ngIf="currentAction === 'consumption'">
+                    <px-tabs 
+                    [selected]="0">
+                            <!-- <px-tab (click)="onSelect(0)" >Over all</px-tab> -->
+                            <px-tab (click)="onSelect(0)">Agricultural</px-tab>
+                            <px-tab (click)="onSelect(1)">Domestic</px-tab>
+                            <px-tab (click)="onSelect(2)">Industrial</px-tab>
+                        </px-tabs>
+                        <iron-pages [selected]="0">
+                            <div *ngIf="selected === 0">
+                                    <table-mat></table-mat>
+                    
+                            </div>
+                            <div *ngIf="selected === 1">
+                                    <table-mat></table-mat>
+                            </div>
+                            <div *ngIf="selected === 2">
+                                    <table-mat></table-mat>
+                            </div>
+                        </iron-pages>
+            </div>
+            <div *ngIf="currentAction === 'reduce'">
+                test
+            </div>
                 
         </div>
     </div>

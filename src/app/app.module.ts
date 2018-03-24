@@ -8,7 +8,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Http } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatTableDataSource, MatSort, MatTable,MatTableModule} from '@angular/material';
+import {MatTableDataSource, MatSort, MatTable,MatTableModule, MatTabsModule} from '@angular/material';
 
 // our component
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { appRoute } from '@app/app.route';
 import { CardChartComponent } from '@shared/chart-card/chart-card.component';
 import { RestService } from '@shared/services/rest.service';
 import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
+import { TableMatComponent } from '@shared/table/table.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
     HomeComponent,
     DashboardComponent,
     CardChartComponent,
-    AnalysisComponent
+    AnalysisComponent,
+    TableMatComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
     ),
     HttpClientModule,
     // MatTable,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule
     // HttpClient
   ],
   providers: [
