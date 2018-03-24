@@ -5,19 +5,19 @@ import { NgModule } from '@angular/core';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTableDataSource, MatSort, MatTable,MatTableModule} from '@angular/material';
 
 // our component
 import { AppComponent } from './app.component';
 import { HomeComponent } from '@pages/home/home.component';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { appRoute } from '@app/app.route';
-
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-
 import { CardChartComponent } from '@shared/chart-card/chart-card.component';
 import { RestService } from '@shared/services/rest.service';
-import { Http } from '@angular/http';
+import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
 
 
 @NgModule({
@@ -25,16 +25,20 @@ import { Http } from '@angular/http';
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    CardChartComponent
+    CardChartComponent,
+    AnalysisComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     Ng2GoogleChartsModule,
     RouterModule.forRoot(
       appRoute,
       { enableTracing: true } // <-- debugging purposes only)
     ),
-    HttpClientModule
+    HttpClientModule,
+    // MatTable,
+    MatTableModule
     // HttpClient
   ],
   providers: [

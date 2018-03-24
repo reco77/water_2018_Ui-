@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RestService } from '@shared/services/rest.service';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/Rx';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -25,7 +26,8 @@ export class AppComponent {
   };
 
   constructor(
-    private rest:RestService
+    private rest:RestService,
+    private http: HttpClient
    ){
     // console.log("test");
     // console.log(rest.getRequest("https://httpbin.org/get",{}));
@@ -37,5 +39,22 @@ export class AppComponent {
     // rest.GetRequest("https://httpbin.org/get",{}).subscriber(res => {
     //   console.log(res);   
     // });
+    // this.http
+    //   .get("/assets/data/regions.csv")
+    //   // .map(data => {
+    //   //   console.log("data: ",data);
+    //   //   return data;
+    //   // } ,(err) => {
+    //   //   console.log("err: ",err);
+    //   // })
+    //   .subscribe(data => {
+    //     // this.items = data;
+    //     console.log(data);
+    //   }, (err) => {
+    //     console.log("error: ",err);
+    //     console.log("error: ",JSON.parse( JSON.stringify( err.error.text)))
+    //   });
+    var reader = new FileReader();
+    // reader.readAsDataURL(Blob)
   }
 }

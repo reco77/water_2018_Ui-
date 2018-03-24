@@ -1,0 +1,23 @@
+<!-- <px-accordion-group>
+    <px-accordion header-value="Produce Water" >
+        
+    </px-accordion>
+    <px-accordion header-value="Reduce" >
+
+    </px-accordion>
+  </px-accordion-group>  -->
+
+<div class="row">
+    <div class="col-2 ">
+        <div class="card max-content padding-15">
+          <p class="action active-action-color" [class]="currentAction === 'produce'? 'active-action-color': ''">Produce Water</p>
+          <p class="action" [class]="currentAction === 'reduce'? 'active-action-color': ''">Reduce</p>  
+        </div>
+        
+    </div>
+    <div class="col-10">
+        <div class="card content">
+                
+        </div>
+    </div>
+</div>
