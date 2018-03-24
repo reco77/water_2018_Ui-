@@ -1,46 +1,44 @@
 <div class="row">
-    <div class="col-4">
+    <div class="col-6">
         <chart-card [title]="'Bar Chart'">
-            <px-simple-bar-chart [width]="500" [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-            [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-            </px-simple-bar-chart>
+            <general-chart
+            [dataTable]="barChartData"
+            [chartType]="'ColumnChart'"
+            [colors]="'c'"
+            >
+            </general-chart>
         </chart-card>
     </div>
-    <div class="col-4">
-        <chart-card [title]="'Bar Chart'">
-            <px-simple-bar-chart [width]="500" [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-            [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-            </px-simple-bar-chart>
-        </chart-card>
-    </div>
-    <div class="col-4">
-        <chart-card [title]="'Bar Chart'">
-            <px-simple-bar-chart [width]="500" A [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-            [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-            </px-simple-bar-chart>
+    <div class="col-6">
+        <chart-card class="chart-card" [title]="'Bar Chart'">
+            <general-chart
+            [dataTable]="barChartData"
+            [chartType]="'BarChart'"
+            [colors]="'c'"
+            >
+            </general-chart>
         </chart-card>
     </div>
 </div>
 <div class="row">
-        <div class="col-4">
+        <div class="col-6">
             <chart-card [title]="'Bar Chart'">
-                <px-simple-bar-chart [width]="500" [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-                    [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-                </px-simple-bar-chart>
+                <general-chart
+                [dataTable]="pieChartData"
+                [chartType]="'PieChart'"
+                [colors]="'serviceTypeColors'"
+                [pieHole]="'0.5'">
+                </general-chart>
             </chart-card>
         </div>
-        <div class="col-4">
+        <div class="col-6">
             <chart-card [title]="'Bar Chart'">
-                <px-simple-bar-chart [width]="500" [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-                [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-                </px-simple-bar-chart>
-            </chart-card>
-        </div>
-        <div class="col-4">
-            <chart-card [title]="'Bar Chart'">
-                <px-simple-bar-chart [width]="500" A [height]="350" [chart-data]='[[1,2,3,4,5,6,7],[2,6,5,4,3,2,7],[2,4,6,7,5,3,6],[3,3,3,3,3,3,4],[5,5,5,5,5,5,5]]'
-                [colors]='["#1976D2","#6BB5FF","#1E8FFF","#355B7F","#1873CC"]' [legend-labels]='["Series 1","Series 2","Series 3","Series 4","Series 5"]' [legend-order]="sequential">
-                </px-simple-bar-chart>
+                <general-chart
+                [dataTable]="barChartData"
+                [chartType]="'ColumnChart'"
+                [colors]="'c'"
+                >
+                </general-chart>
             </chart-card>
         </div>
     </div>

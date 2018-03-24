@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // thrid component
-import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { Ng2GoogleChartsModule, GoogleChartComponent } from 'ng2-google-charts';
 import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { Http } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableDataSource, MatSort, MatTable,MatTableModule} from '@angular/material';
 
@@ -17,6 +16,8 @@ import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { appRoute } from '@app/app.route';
 import { CardChartComponent } from '@shared/chart-card/chart-card.component';
 import { RestService } from '@shared/services/rest.service';
+import { Http } from '@angular/http';
+import { OurGoogleChartComponent } from '@shared/google-charts/general-charts.component';
 import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
 
 
@@ -26,7 +27,8 @@ import { AnalysisComponent } from '@pages/anlysis/anlysis.component';
     HomeComponent,
     DashboardComponent,
     CardChartComponent,
-    AnalysisComponent
+    AnalysisComponent,
+    OurGoogleChartComponent
   ],
   imports: [
     BrowserModule,
