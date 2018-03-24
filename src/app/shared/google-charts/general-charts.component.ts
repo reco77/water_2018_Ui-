@@ -27,6 +27,7 @@ export class OurGoogleChartComponent {
  public serviceLevelColor = ["#0DB2BE"];
  public confirmationCodeColor = ["#50206E"];
  public virtcalGroupedChartColor = ["#50206E", "#0DB2BE"];
+ public hackIot = ['#2962ff','#1CD0FF']
  
  public columnChartData2: any = {
 
@@ -87,6 +88,9 @@ export class OurGoogleChartComponent {
      case 'virtcalGroupedChartColor':
        this.columnChartData2.options.colors = this.virtcalGroupedChartColor;
        break;
+      case 'hackIot':
+      this.columnChartData2.options.colors = this.hackIot;
+      break;
      default:
      this.columnChartData2.options.colors = ["#1976D2"];
      //do nothing

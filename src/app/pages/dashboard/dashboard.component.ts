@@ -7,11 +7,17 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
-    barChartData = [['Year', 'Visitations', { role: 'style' } ],
-    ['2010', 10,""],
-    ['2020', 14,""],
-    ['2030', 16,""]]
-
+    barChartData = [['Year', 'Visitations','test', { role: 'style' } ],
+    ['2012', 10,15,""],
+    ['2013', 14,20,""],
+    ['2014', 16,5,""],
+    ['2014', 10,15,""],
+    ['2015', 14,20,""],
+    ['2016', 16,5,""],
+    ['2017', 16,5,""],
+    ]
+    private happyColor ="#2962ff";
+    private sadColor = "#dd2c00";
     pieChartData = [
         ["Area", "Consumption"],
         ["Riyadh", 80],

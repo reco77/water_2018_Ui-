@@ -19,6 +19,7 @@
         <div class="card content">
             <div *ngIf="currentAction === 'consumption'">
                     <px-tabs 
+                    
                     [selected]="0">
                             <!-- <px-tab (click)="onSelect(0)" >Over all</px-tab> -->
                             <px-tab (click)="onSelect(0)">Agricultural</px-tab>
@@ -39,7 +40,17 @@
                         </iron-pages>
             </div>
             <div *ngIf="currentAction === 'reduce'">
-                test
+                    <px-accordion-group>
+                            <px-accordion header-value="Drons" >
+                                drons
+                            </px-accordion>
+                            <px-accordion header-value="Use some desalination for Agricultural">
+                                use
+                            </px-accordion>
+                            <px-accordion header-value="Header Caption">
+                                test
+                            </px-accordion> 
+                          </px-accordion-group>
             </div>
                 
         </div>

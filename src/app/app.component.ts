@@ -54,6 +54,10 @@ export class AppComponent {
     //     console.log("error: ",err);
     //     console.log("error: ",JSON.parse( JSON.stringify( err.error.text)))
     //   });
+    let responet: Observable<any> = rest.getRequest("http://192.168.42.144:8080/data/byCity",{});
+    responet.subscribe(res => {
+      console.log("res: ",res);
+    });
     var reader = new FileReader();
     // reader.readAsDataURL(Blob)
   }

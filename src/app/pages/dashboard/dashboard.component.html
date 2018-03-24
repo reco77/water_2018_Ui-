@@ -1,4 +1,24 @@
 <div class="row">
+    <div class="col-12">
+        <chart-card [title]="'Bar Chart'">
+            <div class="toEnd">
+                <div class="margin-left-15">
+                    <div class="produce"> </div>
+                    Produce
+                </div>
+                <div class="margin-left-15">
+                        <div class="consumption"></div>
+                        Consumption
+                    </div>
+            </div>
+        <general-chart
+            [dataTable]="barChartData"
+            [chartType]="'ColumnChart'"
+            [colors]="'hackIot'"
+            >
+            </general-chart>
+        </chart-card>
+    </div>
     <div class="col-6">
         <chart-card [title]="'Bar Chart'">
             <general-chart
@@ -22,11 +42,22 @@
 </div>
 <div class="row">
         <div class="col-6">
-            <chart-card [title]="'Bar Chart'">
+
+            <chart-card [title]="'Compare 2017'">
+                    <div class="toEnd">
+                            <div class="margin-left-15">
+                                <div class="produce"> </div>
+                                Produce
+                            </div>
+                            <div class="margin-left-15">
+                                    <div class="consumption"></div>
+                                    Consumption
+                                </div>
+                        </div>
                 <general-chart
                 [dataTable]="pieChartData"
                 [chartType]="'PieChart'"
-                [colors]="'serviceTypeColors'"
+                [colors]="'hackIot'"
                 [pieHole]="'0.5'">
                 </general-chart>
             </chart-card>

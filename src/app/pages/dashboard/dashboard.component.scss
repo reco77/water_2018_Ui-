@@ -5,3 +5,32 @@ dashboard{
     padding: 5px !important;
     }
 }
+
+.toEnd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.margin-left-15 {
+    margin-left:  15px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 15px;
+    height: 15px;
+	/* width and height can be anything, as long as they're equal */
+}
+
+.produce {
+    @extend .circle;
+    background-color: #2962ff;
+    display: inline-flex;
+}
+
+.consumption {
+    @extend .circle;
+    background-color: #1CD0FF;
+    display: inline-flex;
+}
